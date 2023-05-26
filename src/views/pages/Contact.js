@@ -33,12 +33,16 @@ const Contact = () => {
     if (item.includes("facebook")) {
       return (
         <span>
-          <i className="fa-brand fa-facebook-messenger"></i>
+          <i className="fa-brands fa-facebook-messenger me-2"></i>
           <span>{item}</span>
         </span>
       );
     } else {
-      return <span>{item}</span>;
+      return (
+        <span>
+          <span>{item}</span>
+        </span>
+      );
     }
   };
 
@@ -104,7 +108,7 @@ const Contact = () => {
       {/* End Contact List Section */}
 
       {/*Start Footer Section*/}
-      <div className="py-5 mt-5">
+      <div className="py-5 mt-md-5">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-10">
@@ -112,11 +116,15 @@ const Contact = () => {
                 <div className="row">
                   {footerLists.map((item) => {
                     return (
-                      <div key={item.id} className="col-md-4 py-sm-3 headline">
+                      <div
+                        key={item.id}
+                        className="col-md-4 py-3 py-md-0 headline"
+                      >
                         <div className="text-center">
-                          <span className="small text-secondary">
-                            {item.subtitle}
-                          </span>
+                          <div className="small d-flex justify-content-center align-items-center text-secondary">
+                            <span>{item.subtitle}</span>
+                            <div className="footer-bar ms-2"></div>
+                          </div>
                           <h4 className="fw-bold">{item.title}</h4>
                           <span className="small">
                             {descContent(item.desc)}

@@ -29,7 +29,6 @@ const Home = () => {
       origin: "bottom",
       distance: "40px",
       duration: 1200,
-      // reset: true,
       interval: 200,
       scale: 0.9,
       viewFactor: 0.1,
@@ -81,8 +80,7 @@ const Home = () => {
                         {Work.map((work) => {
                           return (
                             <div className="col headline" key={work.id}>
-                              <div
-                                className="card rounded pdf-rounded-xl overflow-hidden border-0 shadow-xl shadow-green-50">
+                              <div className="card rounded pdf-rounded-xl overflow-hidden border-0 shadow-xl shadow-green-50">
                                 <img
                                   src={work.src}
                                   className="img-fluid"
